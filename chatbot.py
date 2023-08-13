@@ -24,20 +24,20 @@ def chatWithBot(user_input):
 # Crie a interface Gradio para o chatbot terapêutico
 iface = gr.Interface(
     fn=chatWithBot,
-    inputs="text",
-    outputs="text",
     title="Terapeuta Virtual",
     description="Converse com nosso terapeuta virtual para compartilhar seus pensamentos e sentimentos.",
+    inputs=gr.Textbox(placeholder="Escreva aqui...", label="Escreva aqui sua questão."),
+    outputs=gr.Textbox(label="Resposta da Terapeuta."),
     examples=[
         ["Olá, estou me sentindo um pouco triste hoje."],
         ["Como lidar com o estresse do dia a dia?"],
+        ["Quem é você?"],
     ],
-    theme="huggingface",
-    layout="vertical",
-    font_family="Helvetica, sans-serif",
-    font_color="#333333",
-    input_component=gr.components.Textbox(lines=5, placeholder="Digite aqui..."),
-    output_component=gr.outputs.Textbox(),
+    theme="freddyaboulton/dracula_revamped",
+    buttons=[
+        gr.Button(label="Enviar"),
+        gr.Button(label="Limpar"),
+    ],
 )
 
 # Inicie a interface
