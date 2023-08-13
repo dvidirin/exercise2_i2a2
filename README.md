@@ -47,7 +47,10 @@ O projeto foi desenvolvido dentro do VSCode<br>
 
 - O arquivo "requirements.txt" deve ser colocado no mesmo diretório do arquivo python principal.<br>
   Comando para instalar as bibliotecas do requirements.txt:<br>
+
+  ```shell
   $ pip install -r requirements.txt
+  ```
 
 - A biblioteca decouple é utilizada para esconder a API Key.<br>
   Para isso ele necessita de um arquivo ".env".<br>
