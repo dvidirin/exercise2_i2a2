@@ -41,4 +41,4 @@ iface = gr.Interface(
 )
 
 # Inicie a interface
-iface.launch(share=True)
+iface.launch()
